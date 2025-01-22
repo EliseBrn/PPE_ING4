@@ -1,8 +1,17 @@
 # Utilisation Git
 
-- repo local : sur votre ordi
-- repo distant : celui que vous voyez sur GitHub
-
+## 0 - Notions
+- <mark>Repo local</mark> : le dépôt Git situé sur votre ordinateur.
+- <mark>Repo distant</mark> : le dépôt Git hébergé sur GitHub, accessible en ligne.
+- <mark>README.md</mark> : un fichier au format Markdown qui sert à fournir des informations sur le projet (comme ce fichier).
+  
+    Astuce : Pas besoin de créer un `README.md` sur votre branche. Si vous en créez un, ajoutez son nom dans le fichier `/.gitignore` pour éviter de le pousser accidentellement.
+- <mark>.gitignore</mark> : un fichier Git permettant de spécifier les fichiers ou extensions à ne pas inclure lors des pushs.
+    - Ajoutez impérativement `.DS_Store` dans ce fichier. `.DS_Store` est un fichier spécifique à macOS qui contient des informations sur l'organisation des fichiers dans le Finder, mais il est inutile pour les autres contributeurs.
+- <mark>Branche</mark> : un espace de travail isolé.
+    - Chaque contributeur travaille sur sa propre branche, ce qui permet de travailler indépendamment de la branche principale (main) et des autres membres de l'équipe.
+    - ATTENTION : jamais travailler directement sur le main.
+ 
 ## I - Première Installation
 1. Assurez-vous que tout est bien installé (voir `/Prerequies.md`).
 
@@ -122,6 +131,8 @@ Si vous faites un commit depuis votre terminal, suivez les instructions de la se
 
 ## V - Merge
 Le merge permet de fusionner les modifications d'une branche dans une autre. Voici les étapes pour effectuer un merge correctement :
+
+### !!! Ceci est à titre indicatif, les premiers merge se feront ensemble pour éviter toutes erreurs possible !!!
 
 1. Basculer sur la branche de destination (si vous voulez fusionner une branche "test" dans "main", commencez par vous placer sur "main"
     ```
