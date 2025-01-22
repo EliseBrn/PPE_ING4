@@ -11,3 +11,7 @@ Avec l'essor des technologies mobiles et des applications connectées, le secteu
 - **Emma Kerzan** - SE - emma.kerzan@edu.ece.fr
 - **Louis Petit** - SE - louis.petit@edu.ece.fr
 - **Danaé Collard** - Finance - danae.collard@edu.ece.fr
+
+## Dossier
+`/Prerequis.md` - Toutes les installations à avoir avant de commencer le projet
+`/utilisation_git.md` - Petit cours/rappels sur l'utilsation de git sur le terminal
