@@ -1,55 +1,56 @@
 # Utilisation Git
 
 ## I - Première Installation
-- Vérifier bien que vous avez tout d'installé (cf `/prerequies.md`)
+- Assurez-vous que tout est bien installé (voir `/Prerequies.md`).
 
-Note : utiliser votre terminal pour la suite de l'installation
-- Pour clone le repo sur votre ordi (**Attention** : regarder bien le chemin où vous le clonez !)
+Note : utilisez votre terminal pour la suite de l'installation.
+- Pour cloner le dépôt sur votre ordinateur (Attention : vérifiez bien le chemin où vous le clonez) :
   ```
   git clone https://github.com/EliseBrn/PPE_ING4.git
   ```
-- Une fois le repo clone, faite pour aller dans le dossier git :
+- Une fois le dépôt cloné, utilisez la commande suivante pour accéder au dossier Git :
   ```
   cd PPE_ING4
   ```
-- Utiliser cette commande pour vérifier que tout est bon
+- Utilisez cette commande pour vérifier que tout est en ordre :
   ```
   ls
   ```
-  Note : vous devriez voir les dossiers present dans le main (dont utilisation_git.md, README.md et prerquies.md notamment)
-- Maintenant vous aller creer votre branche en remplacant **NAME** par votre nom en minuscule
+  Note : vous devriez voir les dossiers présents dans la branche principale (notamment utilisation_git.md, README.md, et Prerequies.md).
+- Maintenant, créez votre branche en remplaçant **NAME*** par votre nom en minuscules :
   ```
   git branch NAME
   ```
-- Utiliser pour voir votre branche
+- Pour vérifier votre branche :
   ```
   git branch
   ```
-- Aller sur votre branche : (remplacer NAME)
+- Passez sur votre branche : (remplacez NAME)
   ```
   git checkout NAME
   ```
-- Ajouter vos modif sur git :
+- Ajoutez vos modif sur git :
   ```
   git add .
   ```
+- Puis effectuez un commit :
   ```
   git commit -m"Creation de ma branche"
   ```
-- Push la branche : (remplacer NAME)
+- Poussez votre branche sur le dépôt distant :  (remplacez NAME)
   ```
   git push -u origin NAME
   ```
-- La tout est presque fini, il manque plus qu'a récupérer la branche des autres membres et c'est bon
+- Là tout est presque fini, il manque plus qu'a récupérer la branche des autres membres et c'est bon
   ```
   git checkout -b elise origin/elise
   ```
-  Note : Là c'est ma branche que vous allez récupérer
+  Note : Là c'est ma branche que vous récupérez.
 
-C'est bon vous etes à jour et vous avez vu les principales commandes utile pour l'utilisation de Git sur le terminal
-Tout cela aurait pu etre fait via le site GitHub mais c'est le plus intuitif d'utilisation. 
-A vous de voir ce que vous préférer utilissr à l'avenir, mais il faut imperativement que vous ayez une version du projet en local pour coder dessus. 
-Vous pourrez commit via le GitHub également mais je vais vous montrer comment le faire via le terminal églement
+C'est bon, vous êtes à jour et vous avez vu les principales commandes utiles pour l'utilisation de Git dans le terminal.
+Tout cela aurait pu être fait via le site GitHub, mais le terminal est le moins intuitif. À vous de voir ce que vous préférez utiliser à l'avenir. Cependant, il est impératif d'avoir une version locale du projet pour travailler dessus.
+Vous pourrez effectuer des commits via GitHub, mais vous allez voir aussi comment le faire depuis le terminal.
+
 ##
 ### Installation si le dossier est supprimé à un moment du projet
 ```
@@ -62,57 +63,57 @@ git checkout -b emma origin/emma
 git checkout -b louis origin/louis
 git checkout -b danae origin/danae
 ```
-Avec ces lignes, vous retrouverer le projet et toutes les branches d'un coup.
-Maintenant vous n'avez plus qu'a aller sur votre branche !
+Avec ces lignes, vous récupérerez le projet et toutes les branches d'un coup.
+Ensuite, il ne vous reste plus qu'à basculer sur votre branche !
 
 ## II - Commandes Utiles
-- `cd` : pour changer de dossier (dans le terminal)
-- `ls` : pour afficher les fichier present dans l'endroit ou vous etes
-- `git branch` : pour voir sur quelle branche vous etes
-- `git checkout branch` : pour changer de branche (remplacer branch par le nom de la branche)
-- `git status` : peremet de checker le status de votre repo en local 
+- `cd` : pour changer de dossier (dans le terminal).
+- `ls` : pour afficher les fichiers presents dans l'endroit où vous êtes.
+- `git branch` : pour voir sur quelle branche vous êtes.
+- `git checkout branch` : pour changer de branche (remplacez **branch** par le nom de la branche).
+- `git status` : peremet de checker le statut de votre repo en local.
 
 ## III - Commit Terminal
-**Attention** : ceci sert à faire un commit sur VOTRE propre branch !!
-Pour merge sur la branch principale c'est dans la partie **V - Merge**
+**Attention** cette section concerne les commits sur **VOTRE** propre branche !
+Pour effectuer un merge sur la branche principale, référez-vous à la partie **V - Merge**
 
-Pour faire un commit depuis votre terminal, vous devez d'abords checker que vous etes dans le bonne branche.
-- Ensuite ajouter les modification à commit avec :
+Pour faire un commit depuis votre terminal, suivez ces étapes :
+- Vérifiez que vous êtes sur la bonne branche.
+- Ajoutez vos modifications au commit :
   ```
   git add .
   ```
-  Note : `.` implique que TOUTES vos modifications vont etre push. Si vous voulez un dossier ou fichier en particulier remplacer le point par son nom
+  Note : le `.` signifie que toutes vos modifications seront ajoutées. Si vous voulez sélectionner un fichier ou dossier spécifique, remplacez le point par son nom.
 
-- Ensuite mettre cette ligne :
+- Ajoutez un message de commit :
   ```
   git commit -m" "
   ```
-  Note : "" doit etre remplis avec les explications de vos modification cf **IV - Conventionan Commit**
+  Note : entre les guillemets, décrivez brièvement vos modifications (cf **IV - Conventionan Commit**)
 
-- Enfin pour les envoyer pour de bon sur git :
+- Enfin poussez vos modifications :
   ```
   git push
   ```
-  Note : il se peut qu'une erreur survienne, chatgpt est bon pour cette résolution de conflit.
-
+ Note : si une erreur survient, ChatGPT est une bonne aide pour vous aider à résoudre les conflits.
 
 ## IV - Conventional Commit
-Si vous faites un commit depuis git vous avez juste besoin de ces conventions ci dessous.
-Si vous faites un commit depuis votre terminal utiliser les instruction dans la partie `II - Commit terminal`
-- A specification for structuring commit messages.
-- Format: `<type>[optional scope]: <description>`
-- Types:
-  - `feat`: A new feature.
-  - `fix`: A bug fix.
-  - `docs`: Documentation changes.
-  - `style`: Code style changes (e.g., formatting).
-  - `refactor`: Code changes that neither fix a bug nor add a feature.
-  - `test`: Adding or modifying tests.
-  - `chore`: Maintenance tasks, build changes, etc.
-- Benefits:
-  - Standardizes commit messages.
-  - Enables automated release notes and versioning.
-  - Improves readability and searchability.
-- Full spec: <https://www.conventionalcommits.org>
+Si vous effectuez un commit depuis Git, vous n'avez besoin que des conventions ci-dessous.
+Si vous faites un commit depuis votre terminal, suivez les instructions de la section : `II - Commit terminal`
+
+- Format : <type>[optional scope]: <description>
+- Types courants :
+  - feat : ajout d'une nouvelle fonctionnalité.
+  - fix : correction de bug.
+  - docs : modifications de la documentation.
+  - style : changements liés au style du code (ex. formatage).
+  - refactor : modifications du code sans ajout de fonctionnalités ni corrections de bugs.
+  - test : ajout ou modification de tests.
+  - chore : tâches d'entretien ou modifications de la configuration.
+- Avantages :
+  - Standardise les messages de commit.
+  - Facilite la génération automatique des notes de version.
+  - Améliore la lisibilité et la recherche des commits.
+  - Pour plus de détails, consultez la spécification complète : <https://www.conventionalcommits.org>
 
 ## V - Merge
