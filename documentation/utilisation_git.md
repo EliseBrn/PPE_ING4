@@ -10,6 +10,9 @@
   - V - Mise à jour de votre repo local
   - VI - Merge
 
+
+
+
 ## 0 - Notions
 - <mark>Repo local</mark> : le dépôt Git situé sur votre ordinateur.
 - <mark>Repo distant</mark> : le dépôt Git hébergé sur GitHub, accessible en ligne.
@@ -22,6 +25,9 @@
     - Chaque contributeur travaille sur sa propre branche, ce qui permet de travailler indépendamment de la branche principale (main) et des autres membres de l'équipe.
     - ATTENTION : jamais travailler directement sur le main.
  
+
+
+
 ## I - Première Installation
 1. Assurez-vous que tout est bien installé (voir `/Prerequies.md`).
 
@@ -74,6 +80,9 @@ C'est bon, vous êtes à jour et vous avez vu les principales commandes utiles p
 Tout cela aurait pu être fait via le site GitHub, mais le terminal est le moins intuitif. À vous de voir ce que vous préférez utiliser à l'avenir. Cependant, il est impératif d'avoir une version locale du projet pour travailler dessus.
 Vous pourrez effectuer des commits via GitHub, mais vous allez voir aussi comment le faire depuis le terminal.
 
+
+
+
 ##
 ### Installation si le dossier est supprimé à un moment du projet
 ```
@@ -89,12 +98,19 @@ git checkout -b danae origin/danae
 Avec ces lignes, vous récupérerez le projet et toutes les branches d'un coup.
 Ensuite, il ne vous reste plus qu'à basculer sur votre branche !
 
+
+
+
 ## II - Commandes Utiles
 - `cd` : pour changer de dossier (dans le terminal).
 - `ls` : pour afficher les fichiers presents dans l'endroit où vous êtes.
 - `git branch` : pour voir sur quelle branche vous êtes.
 - `git checkout branch` : pour changer de branche (remplacez **branch** par le nom de la branche).
 - `git status` : peremet de checker le statut de votre repo en local.
+- `git diff` : pour voir les différences locales.
+
+
+
 
 ## III - Commit Terminal
 **Attention** cette section concerne les commits sur **VOTRE** propre branche !
@@ -120,6 +136,9 @@ Pour faire un commit depuis votre terminal, suivez ces étapes :
     ```
    Note : si une erreur survient, ChatGPT est une bonne aide pour vous aider à résoudre les conflits.
 
+
+
+
 ## IV - Conventional Commit
 Si vous effectuez un commit depuis Git, vous n'avez besoin que des conventions ci-dessous.
 Si vous faites un commit depuis votre terminal, suivez les instructions de la section : `II - Commit terminal`
@@ -139,7 +158,21 @@ Si vous faites un commit depuis votre terminal, suivez les instructions de la se
   - Améliore la lisibilité et la recherche des commits.
   - Pour plus de détails, consultez la spécification complète : <https://www.conventionalcommits.org>
 
-## V - Mise à jour de votre repo local
+
+
+
+## V - Mise à jour d'une branche
+1. Aller sur la branche à mettre à jour
+2. Récupérer les modifications depuis le dépôt distant
+  ```
+  git fetch
+  ```
+3. Appliquer les modifications à votre branche locale
+  ```
+  git pull
+  ```
+
+
 
 
 ## VI - Merge
@@ -173,13 +206,6 @@ Le merge permet de fusionner les modifications d'une branche dans une autre. Voi
     ```
     git push
     ```
-
-
-
-
-
-
-
 
 
 
