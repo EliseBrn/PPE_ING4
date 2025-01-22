@@ -143,15 +143,15 @@ Pour faire un commit depuis votre terminal, suivez ces étapes :
 Si vous effectuez un commit depuis Git, vous n'avez besoin que des conventions ci-dessous.
 Si vous faites un commit depuis votre terminal, suivez les instructions de la section : `II - Commit terminal`
 
-- Format : <type>[optional scope]: <description>
+- Format : `<type>[optional scope]: <description>``
 - Types courants :
-  - feat : ajout d'une nouvelle fonctionnalité.
-  - fix : correction de bug.
-  - docs : modifications de la documentation.
-  - style : changements liés au style du code (ex. formatage).
-  - refactor : modifications du code sans ajout de fonctionnalités ni corrections de bugs.
-  - test : ajout ou modification de tests.
-  - chore : tâches d'entretien ou modifications de la configuration.
+  - `feat` : ajout d'une nouvelle fonctionnalité.
+  - `fixe` : correction de bug.
+  - `docs` : modifications de la documentation.
+  - `style` : changements liés au style du code (ex. formatage).
+  - `refactor` : modifications du code sans ajout de fonctionnalités ni corrections de bugs.
+  - `test` : ajout ou modification de tests.
+  - `chore` : tâches d'entretien ou modifications de la configuration.
 - Avantages :
   - Standardise les messages de commit.
   - Facilite la génération automatique des notes de version.
