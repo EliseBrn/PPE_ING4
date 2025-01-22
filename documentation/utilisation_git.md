@@ -180,7 +180,35 @@ Le merge permet de fusionner les modifications d'une branche dans une autre. Voi
 
 ### !!! Ceci est à titre indicatif, les premiers merge se feront ensemble pour éviter toutes erreurs possible !!!
 
-1. Basculer sur la branche de destination (si vous voulez fusionner une branche "test" dans "main", commencez par vous placer sur "main"
+### Merge un fichier en particulier
+1. Basculer sur la branche de destination (si vous voulez fusionner un fichier `test.txt` d'une branche "my_branch" dans "main", commencez par vous placer sur "main")
+    ```
+    git checkout main
+    ```
+2. Récupérer uniquement test.txt depuis elise
+    ```
+    git checkout my_branch -- test.txt
+    ```
+3. Vérifier les modifications
+    ```
+    git status
+    ```
+4. Ajouter le fichier
+    ```
+    git add test.txt
+    ```
+5. Commit
+    ```
+    git commit -m "Fusion de test.txt depuis la branche my_branch"
+    ```
+6. Push (optionnel)
+    ```
+    git push origin main
+    ```
+
+
+### Merge toute une branche
+1. Basculer sur la branche de destination (si vous voulez fusionner une branche "test" dans "main", commencez par vous placer sur "main")
     ```
     git checkout main
     ```
