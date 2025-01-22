@@ -1,5 +1,15 @@
 # Utilisation Git
 
+## Plan
+  - 0 - Notion
+  - I - Première Installation
+  - Installation si le dossier est supprimé à un moment du projet
+  - II - Commandes Utiles
+  - III - Commit Terminal
+  - IV - Conventional Commit
+  - V - Mise à jour de votre repo local
+  - VI - Merge
+
 ## 0 - Notions
 - <mark>Repo local</mark> : le dépôt Git situé sur votre ordinateur.
 - <mark>Repo distant</mark> : le dépôt Git hébergé sur GitHub, accessible en ligne.
@@ -88,7 +98,7 @@ Ensuite, il ne vous reste plus qu'à basculer sur votre branche !
 
 ## III - Commit Terminal
 **Attention** cette section concerne les commits sur **VOTRE** propre branche !
-Pour effectuer un merge sur la branche principale, référez-vous à la partie **V - Merge**
+Pour effectuer un merge sur la branche principale, référez-vous à la partie **VI - Merge**
 
 Pour faire un commit depuis votre terminal, suivez ces étapes :
 1. Vérifiez que vous êtes sur la bonne branche.
@@ -129,7 +139,10 @@ Si vous faites un commit depuis votre terminal, suivez les instructions de la se
   - Améliore la lisibilité et la recherche des commits.
   - Pour plus de détails, consultez la spécification complète : <https://www.conventionalcommits.org>
 
-## V - Merge
+## V - Mise à jour de votre repo local
+
+
+## VI - Merge
 Le merge permet de fusionner les modifications d'une branche dans une autre. Voici les étapes pour effectuer un merge correctement :
 
 ### !!! Ceci est à titre indicatif, les premiers merge se feront ensemble pour éviter toutes erreurs possible !!!
