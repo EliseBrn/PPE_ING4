@@ -81,7 +81,7 @@ Tout cela aurait pu être fait via le site GitHub, mais le terminal est le moins
 Vous pourrez effectuer des commits via GitHub, mais vous allez voir aussi comment le faire depuis le terminal.
 
 
-
+![alt text](https://github.com/EliseBrn/PPE_ING4/edit/main/Image/terminal_git_cours.png)
 
 ##
 ### Installation si le dossier est supprimé à un moment du projet
