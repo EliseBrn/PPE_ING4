@@ -8,12 +8,13 @@ CREATE TABLE users (
     first_name VARCHAR(255) NOT NULL,
     pseudo VARCHAR(255) NOT NULL UNIQUE,
     birth_date DATE NOT NULL,
-    gender VARCHAR(50) DEFAULT NULL COMMENT 'male, female, other',
+    gender ENUM('male', 'female', 'other') DEFAULT NULL,
     photo TEXT DEFAULT NULL,
+    inscription_date TIME DEFAULT CURRENT_TIMESTAMP,
     description TEXT DEFAULT NULL
 );
 
--- Table: paramtere
+-- Table: parameters
 CREATE TABLE parameters (
     id_user INT NOT NULL,
     profile_visibility BOOLEAN DEFAULT TRUE,
@@ -150,7 +151,7 @@ CREATE TABLE messages (
 
 -- Table: buildings_list
 CREATE TABLE buildings_list (
-    id_buildings INT AUTO_INCREMENT PRIMARY KEY,
+    id_building INT AUTO_INCREMENT PRIMARY KEY,
     buildings_name VARCHAR(255) NOT NULL,
     location VARCHAR(255) NOT NULL,
     type VARCHAR(255) NOT NULL,
@@ -166,11 +167,11 @@ CREATE TABLE rooms_list (
     room_photos TEXT DEFAULT NULL,
     description TEXT DEFAULT NULL,
     type VARCHAR(255) NOT NULL,
-    FOREIGN KEY (id_building) REFERENCES buildings_list(id_buildings) ON DELETE CASCADE
+    FOREIGN KEY (id_building) REFERENCES buildings_list(id_building) ON DELETE CASCADE
 );
 
 -- Table: sports_in_salle
-CREATE TABLE sports_in_salle (
+CREATE TABLE sports_in_room (
     id_room INT NOT NULL,
     id_sport INT NOT NULL,
     PRIMARY KEY (id_room, id_sport),
@@ -181,7 +182,7 @@ CREATE TABLE sports_in_salle (
 -- Table: reservations
 CREATE TABLE reservations (
     id_reservation INT AUTO_INCREMENT PRIMARY KEY,
-    id_sroom INT NOT NULL,
+    id_room INT NOT NULL,
     id_creator INT NOT NULL,
     reservation_date DATE NOT NULL,
     start_time TIME NOT NULL,
@@ -212,3 +213,10 @@ CREATE TABLE room_availability (
     PRIMARY KEY (id_room, available_date, start_time, end_time),
     FOREIGN KEY (id_room) REFERENCES rooms_list(id_room) ON DELETE CASCADE
 );
+
+
+-- Indexe
+CREATE INDEX idx_user_email ON users(email);
+CREATE INDEX idx_user_pseudo ON users(pseudo);
+CREATE INDEX idx_user_birth ON users(birth_date);
+
