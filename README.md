@@ -13,9 +13,9 @@ Avec l'essor des technologies mobiles et des applications connectées, le secteu
 - **Danaé Collard** - Finance - danae.collard@edu.ece.fr
 
 ## Fichier
-- [prerequis.md](https://github.com/EliseBrn/PPE_ING4/blob/main/documentation/prerequis.md) - Toutes les installations à avoir avant de commencer le projet -> En cours d'écriture
-- [utilisation_git.md](https://github.com/EliseBrn/PPE_ING4/blob/main/documentation/utilisation_git.md) - Petit cours/rappels sur l'utilsation de git sur le terminal
-- [base_de_donnée.md](https://github.com/EliseBrn/PPE_ING4/blob/main/documentation/base_de_donnee.md) - Informations sur l'organisation de la base de donnée (distant et local) -> En cours d'écriture
+- [prerequis.md](https://github.com/EliseBrn/PPE_ING4/blob/main/documentations/prerequis.md) - Toutes les installations à avoir avant de commencer le projet -> En cours d'écriture
+- [utilisation_git.md](https://github.com/EliseBrn/PPE_ING4/blob/main/documentations/utilisation_git.md) - Petit cours/rappels sur l'utilsation de git sur le terminal
+- [base_de_donnée.md](https://github.com/EliseBrn/PPE_ING4/blob/main/documentations/base_de_donnee.md) - Informations sur l'organisation de la base de donnée (distant et local) -> En cours d'écriture
 
 ## Code
 - [SQL code](https://github.com/EliseBrn/PPE_ING4/blob/main/code/BdD_PPE.sql) - Code sql de la base de donnée
