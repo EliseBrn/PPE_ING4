@@ -5,8 +5,8 @@
 2. Les tables
 3. Logique de suppression (cascade)
 
-Code : [sql_fichier](https://github.com/EliseBrn/PPE_ING4/tree/main/code/schema.sql)
-- **Ordre des fichier** : [schema.sql](https://github.com/EliseBrn/PPE_ING4/tree/main/code/schema.sql) + [functions_and_triggers.sql](https://github.com/EliseBrn/PPE_ING4/tree/main/code/functions_and_triggers.sql) + [constraint.sql](https://github.com/EliseBrn/PPE_ING4/tree/main/code/constraint.sql)  + [index.sql](https://github.com/EliseBrn/PPE_ING4/tree/main/code/index.sql) + [initial_data.sql](https://github.com/EliseBrn/PPE_ING4/tree/main/code/initial_data.sql)
+Code : [sql_fichier](https://github.com/EliseBrn/PPE_ING4/tree/main/code/code_sql/schema.sql)
+- **Ordre des fichier** : [schema.sql](https://github.com/EliseBrn/PPE_ING4/tree/main/code/code_sql/schema.sql) + [functions_and_triggers.sql](https://github.com/EliseBrn/PPE_ING4/tree/main/code/code_sql/functions_and_triggers.sql) + [constraint.sql](https://github.com/EliseBrn/PPE_ING4/tree/main/code/code_sql/constraint.sql)  + [index.sql](https://github.com/EliseBrn/PPE_ING4/tree/main/code/code_sql/index.sql) + [initial_data.sql](https://github.com/EliseBrn/PPE_ING4/tree/main/code/code_sql/initial_data.sql)
 
 ## 1 - Logique de l'organisation
 
