@@ -18,10 +18,10 @@ CREATE TABLE user (
 -- user_setting: cascade car dépend entièrement de l'utilisateur
 CREATE TABLE user_setting (
     id_user INT PRIMARY KEY,
-    profile_visibility TINYINT(1) DEFAULT 1,
-    first_name_visibility TINYINT(1) DEFAULT 1,
-    birth_date_visibility TINYINT(1) DEFAULT 0,
-    notification_enabled TINYINT(1) DEFAULT 0,
+    profile_visibility TINYINT(1) DEFAULT 1, -- 1 is true and 0 false -- visibility du profil pour les matchs
+    first_name_visibility TINYINT(1) DEFAULT 1, -- visibility du prénoms
+    birth_date_visibility TINYINT(1) DEFAULT 1, -- visibility de la date de naissance
+    notification_enabled TINYINT(1) DEFAULT 0, -- désactivation des notifs
     FOREIGN KEY (id_user) REFERENCES user(id_user) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
