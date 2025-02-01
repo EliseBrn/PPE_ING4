@@ -1,7 +1,7 @@
 -- Table user
 ALTER TABLE user
 ADD CONSTRAINT check_email CHECK (email REGEXP '^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$'),
-ADD CONSTRAINT check_birth_date CHECK (birth_date <= CURRENT_DATE);
+ADD CONSTRAINT check_birth_date CHECK (birth_date <= CURRENT_DATE),
 ADD CONSTRAINT check_password_length CHECK (LENGTH(password) >= 8);
 
 -- Table sport_user
