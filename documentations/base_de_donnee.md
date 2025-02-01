@@ -12,63 +12,63 @@ Fichier SQL -> [sql_fichier](https://github.com/EliseBrn/PPE_ING4/tree/main/code
 
 ## 2 - Les tables
 
-### `users`
-Contient les informations de base sur les utilisateurs de la plateforme (email, mot de passe, prénom, pseudo, etc.).
+### `user`
+Contient les informations de base sur les utilisateurs de la plateforme (email, mot de passe, prénom, pseudo, etc.), ainsi que leur date d'inscription.
 
-### `parameters`
-Stocke les paramètres de configuration et les préférences des utilisateurs, comme la visibilité du profil et les paramètres de notification.
+### `user_setting`
+Stocke les paramètres de confidentialité et de notification des utilisateurs, comme la visibilité du profil et des informations personnelles.
 
-### `sports_list`
-Liste des sports disponibles sur la plateforme, avec des informations comme des logos et des descriptions.
+### `sport`
+Liste les sports disponibles sur la plateforme, avec des descriptions et des logos.
 
-### `sports`
-Associe les utilisateurs aux sports qu'ils pratiquent, ainsi que leur niveau de compétence, leur club et s'ils cherchent des partenaires.
+### `sport_user`
+Associe les utilisateurs aux sports qu'ils pratiquent, incluant leur niveau, leur club et leur disponibilité pour trouver des partenaires.
 
-### `badges_list`
-Liste des badges disponibles, avec des descriptions et des critères d'attribution.
+### `badge`
+Liste les badges disponibles, avec leurs descriptions et les conditions pour les obtenir.
 
-### `badges`
-Associe les utilisateurs aux badges qu'ils ont obtenus, avec la date d'obtention et la visibilité sur leur profil.
+### `badge_user`
+Associe les utilisateurs aux badges qu'ils ont obtenus, avec la date d'obtention et leur visibilité sur le profil.
 
 ### `friendship`
-Gère les relations d'amitié entre utilisateurs (qui suit qui), avec la date du suivi.
+Gère les relations d'amitié entre utilisateurs (qui suit qui), en enregistrant la date de suivi.
 
-### `matches`
-Gère les demandes de mise en relation entre utilisateurs (ex: demande d'amis), avec les statuts de ces demandes (en attente, acceptée, refusée).
+### `match`
+Gère les demandes de mise en relation entre utilisateurs, avec le statut des demandes (en attente, acceptée ou refusée).
 
-### `posts`
-Contient les publications des utilisateurs, y compris les informations sur la localisation, la visibilité, la description et les photos.
+### `post`
+Stocke les publications des utilisateurs, incluant les photos, la localisation, la description et la visibilité (amis uniquement ou public).
 
-### `likes`
-Enregistre les "likes" des utilisateurs sur les posts (qui aime quel post), avec la date et l'heure.
+### `like`
+Enregistre les "likes" des utilisateurs sur les publications (qui aime quel post), avec la date et l'heure.
 
-### `comments`
-Enregistre les commentaires des utilisateurs sur les publications des autres.
+### `comment`
+Stocke les commentaires des utilisateurs sur les publications, avec leur contenu, la date et l'heure.
 
-### `conversations`
-Contient les conversations entre utilisateurs (peut être un chat privé ou un groupe), avec le nom et la date de création.
+### `conversation`
+Gère les conversations entre utilisateurs, avec leur nom, le créateur et la date de création.
 
-### `conversation_participants`
-Associe les utilisateurs aux conversations auxquelles ils participent, avec la date d'adhésion.
+### `conversation_participant`
+Associe les utilisateurs aux conversations auxquelles ils participent, avec la date de leur entrée dans la conversation.
 
-### `messages`
-Stocke les messages envoyés dans les conversations, y compris le contenu et la date/heure d'envoi.
+### `message`
+Stocke les messages envoyés dans les conversations, avec leur contenu, la date et l'heure d'envoi, et une indication s'ils ont été édités.
 
-### `buildings_list`
-Liste des bâtiments disponibles sur la plateforme, avec leur nom, type et photos.
+### `building`
+Liste les bâtiments disponibles, avec leur nom, leur localisation, leur type et des informations supplémentaires comme des descriptions ou des photos.
 
-### `rooms_list`
-Liste des salles disponibles dans chaque bâtiment, avec leur description, photos et type.
+### `room`
+Liste les salles disponibles dans les bâtiments, avec leurs noms, types, descriptions et photos.
 
-### `sports_in_room`
+### `sport_in_room`
 Associe les sports aux salles où ils peuvent être pratiqués.
 
-### `reservations`
-Gère les réservations de salles par les utilisateurs, avec les horaires, le statut et la description de la réservation.
+### `reservation`
+Gère les réservations des salles par les utilisateurs, avec les horaires, le statut de la réservation et des détails optionnels.
 
-### `reservation_participants`
-Associe les utilisateurs aux réservations auxquelles ils participent, avec leur statut (invité, confirmé, refusé).
+### `reservation_participant`
+Associe les utilisateurs aux réservations, avec leur statut (invité, confirmé ou refusé).
 
 ### `room_availability`
-Gère la disponibilité des salles pour des dates et horaires spécifiques.
+Gère la disponibilité des salles pour des dates et horaires spécifiques, avec un statut indiquant si elles sont réservées ou non.
 
