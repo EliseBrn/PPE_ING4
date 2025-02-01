@@ -43,3 +43,20 @@ BEGIN
 END //
 
 DELIMITER ;
+
+
+
+-- mise a jour auto pour une réservation
+DELIMITER //
+CREATE TRIGGER after_reservation_insert
+AFTER INSERT ON reservation
+FOR EACH ROW
+BEGIN
+    UPDATE room_availability
+    SET is_booked = TRUE
+    WHERE id_room = NEW.id_room
+    AND available_date = NEW.reservation_date
+    AND start_time <= NEW.start_time
+    AND end_time >= NEW.end_time;
+END //
+DELIMITER ;
