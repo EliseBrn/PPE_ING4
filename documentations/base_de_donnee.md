@@ -39,14 +39,16 @@ Code : [sql_fichier](https://github.com/EliseBrn/PPE_ING4/tree/main/code/schema.
 
 ## 3 - Logique de suppression (cascade)
 
-Pour la suppression d'un user on souhaite garder uniquement ses **likes** sur les posts et **messages** dans les conversations.
+- Pour la suppression d'un user on souhaite garder uniquement ses **likes** sur les posts et **messages** dans les conversations.
+  - Creation d'un user anonyme sous id_user = 0
+    ```
+    INSERT INTO user (id_user, email, password, first_name, pseudo)
+    VALUES (0, 'anonymous@example.com', 'not_applicable', 'Anonymous', 'Anonymous');
+    ```
+  - Cascade : règle définie sur une clé étrangère pour automatiser ce qu'il se passe dans les tables liées quand une action est effectuée sur une table parent (suppression, modification...)
+  - Cascade pour les likes et les messages : ```ON DELETE SET DEFAULT``` après la foreign key faisant référence à l'id_user.
 
-- Creation d'un user anonyme sous id_user = 0
-  ```
-  INSERT INTO user (id_user, email, password, first_name, pseudo)
-  VALUES (0, 'anonymous@example.com', 'not_applicable', 'Anonymous', 'Anonymous');
-  ```
-- Cascade : règle définie sur une clé étrangère pour automatiser ce qu'il se passe dans les tables liées quand une action est effectuée sur une table parent (suppression, modification...)
-- Cascade pour les likes et les messages : ```ON DELETE SET DEFAULT``` après la foreign key faisant référence à l'id_user.
-
-
+- Pour les réservations si un user est supprimé :
+  - Impossible de supprimer un compte si une réservation ou participation à une réservation est en cours.
+  - Ajout d'une fonction `user_has_active_reservations(user_id INT)` et d'un trigger `before_user_delete` pour s'assurer que le user n'ai pas de réservation en cours.
+  - Il faudra prévenir le user si la suppression ne marche pas à cause de ça.
