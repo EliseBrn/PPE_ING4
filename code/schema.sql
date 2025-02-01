@@ -80,7 +80,7 @@ CREATE TABLE friendship (
 
 -- Create match table
 -- match: cascade car dépend des utilisateurs
-CREATE TABLE `match` (
+CREATE TABLE match_user (
     id_user_requester INT,
     id_user_liked INT,
     request_status ENUM('Wait', 'Accepted', 'Declined') DEFAULT 'Wait',
@@ -105,7 +105,7 @@ CREATE TABLE post (
 
 -- Create like table
 -- like: cascade car dépend du post et de l'utilisateur
-CREATE TABLE `like` (
+CREATE TABLE like_post (
     id_user INT DEFAULT 0,
     id_post INT,
     like_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
