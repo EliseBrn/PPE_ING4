@@ -101,11 +101,11 @@ CREATE TABLE post (
 -- Create like table
 -- like: cascade car dépend du post et de l'utilisateur
 CREATE TABLE like (
-    id_user INT,
+    id_user INT DEFAULT 0,
     id_post INT,
     like_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     PRIMARY KEY (id_user, id_post),
-    FOREIGN KEY (id_user) REFERENCES user(id_user) ON DELETE CASCADE ON UPDATE CASCADE,
+    FOREIGN KEY (id_user) REFERENCES user(id_user) ON DELETE SET DEFAULT ON UPDATE CASCADE,
     FOREIGN KEY (id_post) REFERENCES post(id_post) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
@@ -146,12 +146,12 @@ CREATE TABLE conversation_participant (
 -- message: cascade car dépend de la conversation
 CREATE TABLE message (
     id_message INT PRIMARY KEY,
-    id_user_sender INT,
+    id_user_sender INT DEFAULT 0,
     id_conversation INT,
     content TEXT NOT NULL,
     edited BOOLEAN DEFAULT FALSE,
     sent_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    FOREIGN KEY (id_user_sender) REFERENCES user(id_user) ON DELETE SET NULL ON UPDATE CASCADE,
+    FOREIGN KEY (id_user_sender) REFERENCES user(id_user) ON DELETE SET DEFAULT ON UPDATE CASCADE,
     FOREIGN KEY (id_conversation) REFERENCES conversation(id_conversation) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
