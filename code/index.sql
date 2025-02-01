@@ -31,6 +31,7 @@ CREATE INDEX idx_match_user_id_user_liked ON match_user(id_user_liked);
 -- Index sur la table post
 CREATE INDEX idx_post_id_publisher ON post(id_publisher);
 CREATE INDEX idx_post_status ON post(status);
+CREATE INDEX idx_post_date ON post(post_date);
 
 -- Index sur la table like_post
 CREATE INDEX idx_like_post_id_user ON like_post(id_user);
@@ -50,6 +51,7 @@ CREATE INDEX idx_conversation_participant_id_user ON conversation_participant(id
 -- Index sur la table message
 CREATE INDEX idx_message_id_user_sender ON message(id_user_sender);
 CREATE INDEX idx_message_id_conversation ON message(id_conversation);
+CREATE INDEX idx_message_sent_at ON message(sent_at);
 
 -- Index sur la table building
 CREATE INDEX idx_building_location ON building(location);
