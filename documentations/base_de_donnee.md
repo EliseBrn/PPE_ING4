@@ -5,7 +5,7 @@
 2. Les tables
 3. Logique de suppression (cascade)
 
-Code : [sql_fichier](https://github.com/EliseBrn/PPE_ING4/tree/main/code/BdD_PPE.sql)
+Code : [sql_fichier](https://github.com/EliseBrn/PPE_ING4/tree/main/code/schema.sql)
 
 
 ## 1 - Logique de l'organisation
