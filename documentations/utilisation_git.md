@@ -186,7 +186,7 @@ Le merge permet de fusionner les modifications d'une branche dans une autre. Voi
     ```
     git checkout main
     ```
-2. Récupérer uniquement test.txt depuis elise
+2. Récupérer uniquement test.txt depuis my_branch
     ```
     git checkout my_branch -- test.txt
     ```
