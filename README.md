@@ -19,4 +19,4 @@ Avec l'essor des technologies mobiles et des applications connectées, le secteu
 
 ## Code
 - [SQL code](https://github.com/EliseBrn/PPE_ING4/blob/main/code/code_sql) - Code sql de la base de donnée
-- [Firebase](https://github.com/EliseBrn/PPE_ING4/blob/main/code/code_firebase) - Code base de donnée pour firebase
+- [Supabase](https://github.com/EliseBrn/PPE_ING4/blob/main/code/code_supabase) - Code base de donnée pour supabase
