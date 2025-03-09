@@ -1,3 +1,4 @@
+-- PostgreSQL
 -- Creation des différentes tables
 
 -- Create User table
